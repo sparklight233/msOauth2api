@@ -1,8 +1,16 @@
-MS OAuth2API VPS版本
+MS OAuth2API Docker版本
+```
+services:
+  msoauth2api:
+    image: sparklight233/msoauth2api:latest
+    container_name: msoauth2api
+    restart: always
+    ports:
+      - "127.0.0.1:9898:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - PASSWORD=
+      - SEND_PASSWORD=
+```
 
-1. clone this repo 
-2. cd to the repo
-3. yarn install
-4. node app.js
-
-变量见`.env.template`
